@@ -8,7 +8,7 @@ Yaniv Shoham  ;  Dvir Datner
 ********************************************************************************************
 run on x86
 
-#Description of the program:
+# Description of the program:
 The program runs the classic game Gold Miner.
 The board of the game is a big mine including different kind of objects: regular rocks,
 golden rocks, diamond rocks, tnt barrels and surprise bags.
@@ -38,9 +38,8 @@ play.
 extra coins: gives the player a reward of 500 coins.
 extra dynamite
 
-
 ********************************************************************************************
-#There are in total 48 classes:
+# There are in total 48 classes:
 
 main - runs the program using controller object.
 Controller - controls the program sessions of games.
@@ -67,11 +66,13 @@ the paused level.
 MuteButton - activates mute/unmute music in game.
 SinglePlayerButton - activates the single player option of playing against a ComputerPlayer.
 MultiPlayerButton - activates the multi player option.
+
 ==========================================================================================
 
 Menu - abstract class for menu holds background and vector of buttons.
 
 ==========================================================================================
+
 derive from Menu:
 HomeMenu - contains MuteButton
 PauseMenu - a menu that activates during the play of level. contains ExitButton,
@@ -80,6 +81,7 @@ SummaryMenu - a menu that appears between levels and shows the present points of
 players. contains ContinueButton.
 GameOverMenu - a menu that appears at the end of the game. contains two buttons: ExitBUtton and 
 HomeButton. 
+
 ==========================================================================================
 
 Factory - a class that create BoardObjects in a factory design pattern.
@@ -94,19 +96,26 @@ Derive from Object:
 BoardObject - an abstract class that represents an object that is found on the board.
 
 ==========================================================================================
+
 Derive from BoardObject:
 Rock - an abstract class of general Rock.
+
 ==========================================================================================
+
 Derive from Rock:
 GoldenRock - derives from Rock.
 RegularRock - derives from Rock.
 DiamondRock - derives from Rock.
 each of the classes that derives from Rock has it's own texture, value and etc.
+
 ==========================================================================================
 SurpriseBag - a class that represents the surprise bag holds the kind of feature that hidden
 inside. the feature is chosen randommly when creating the object.
+
 ==========================================================================================
+
 Barrel - a class that represents the barrel board object.
+
 ==========================================================================================
 
 Dynamite - an object that thrown by the player.
@@ -119,18 +128,21 @@ DynamiteIndicator - shows the number of dynamites a player has.
 Score - shows the score of a player (number of coins).
 Clock - shows the time remains in a certain level.
 LevelIndicator - shows the number of the current played level.
+
 ==========================================================================================
 
 Hook - an object that is holded by each player and controlled by the player.
 the hook is respponsible to be sent by the player to the mine board and intersect with the
 BoardObjects grab them and to be a link factor between the grabbed object to the player.
 the hook rotates right and left as long as the player hasn't send it.
+
 ===========================================================================================
 
 Player - an abstract class of player. contains mine and throw dynamite animations, rectangle
 shape, hook, rewardSound, Dynamite.
 
 ===========================================================================================
+
 Derive from Player:
 HumanPlayer : represents a human player controlled by the input of the keyboard.
 has spacific play method, and use it's textures and animations.
