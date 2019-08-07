@@ -3,12 +3,12 @@
 Gold Miner Project
 ********************************************************************************************
 
-Yaniv Shoham - 203457155 ;  Dvir Datner - 203865381
+Yaniv Shoham  ;  Dvir Datner 
 
 ********************************************************************************************
 run on x86
 
-Description of the program:
+#Description of the program:
 The program runs the classic game Gold Miner.
 The board of the game is a big mine including different kind of objects: regular rocks,
 golden rocks, diamond rocks, tnt barrels and surprise bags.
@@ -33,14 +33,14 @@ The diamond rock worth more than all the other rocks and it's size is constant s
 The tnt barrel has no value and its purpose is to explode when touched and explode other objects 
 surrounded.
 The surprise bag includes 3 different features:
-# Freeze: this surprise freeze the player for certain amount of time and prevent him to keep
+Freeze: this surprise freeze the player for certain amount of time and prevent him to keep
 play.
-# extra coins: gives the player a reward of 500 coins.
-# extra dynamite
+extra coins: gives the player a reward of 500 coins.
+extra dynamite
 
 
 ********************************************************************************************
-There are in total 48 classes:
+#There are in total 48 classes:
 
 main - runs the program using controller object.
 Controller - controls the program sessions of games.
