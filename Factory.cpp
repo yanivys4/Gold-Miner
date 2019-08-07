@@ -16,5 +16,4 @@ bool Factory::registerit(char name, Pfn f)
 	return true;
 }
 
-
- 
+דביר יא זין מעופף
